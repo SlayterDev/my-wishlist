@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
+const mustache = require('mustache');
 
 function writeJSONToTemplate() {
     const filePath = path.join(__dirname, './data/data.json');
@@ -9,7 +10,6 @@ function writeJSONToTemplate() {
     const dataJson = JSON.parse(data);
 
     // use mustache to render the template
-    const mustache = require('mustache');
     const template = fs.readFileSync(path.join(__dirname, './templates/index.mustache'), 'utf-8');
     const rendered = mustache.render(template, dataJson);
 
