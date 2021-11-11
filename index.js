@@ -116,4 +116,4 @@ const questions = [
         // write the new data to the template
         writeJSONToTemplate();
     });
-})()
+})();
