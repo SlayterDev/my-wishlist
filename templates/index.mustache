@@ -1,0 +1,33 @@
+<!-- A webpage that displays a wishlist -->
+<!DOCTYPE html>
+<!-- Path: templates/index.html -->
+<!-- A webpage that displays a wishlist -->
+<html>
+<head>
+    <title>Wishlist</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h1>{{name}}'s Wishlist</h1>
+
+    <div class="wishlist-container">
+        <ol class="wishlist-list">
+            {{#items}}
+                <li class="wishlist-item">
+                    <img class="wishlist-item-image" src="{{image}}" alt="{{name}}"/>
+                    <div class="wishlist-item-info">
+                        <h3 class="wishlist-item-name">{{name}}</h3>
+                        <div class="wishlist-item-price">${{price}}</div>
+                        <div class="wishlist-item-description">{{description}}</div>
+                        <div class="wishlist-item-link"><a href="{{link}}">Link</a></div>
+                    </div>
+                </li>
+            {{/items}}
+        </ol>
+    </div>
+
+</body>
+</html>
