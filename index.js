@@ -111,7 +111,7 @@ const questions = [
         });
 
         // write the new data back to the data.json file
-        fs.writeFileSync(filePath, JSON.stringify(dataJson));
+        fs.writeFileSync(filePath, JSON.stringify(dataJson, null, 4));
 
         // write the new data to the template
         writeJSONToTemplate();
